@@ -1,0 +1,24 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Liste de Fournisseurs {% endblock title %}
+{% block content %}
+		<!-- all fournisseurs -->
+		<div id='fournisseurs' style="text-align: center;margin-right: 15%;margin-left: 15%;margin-top: 20px;">
+			<div class="row  bg-light">
+				{% for fourn in fournisseurs %}
+				<div  id={{fourn.id}} style="text-align: center;  width: 18rem;">
+					<div class="card-body">
+						<strong><p class="card-text">{{fourn.nom}}</p></strong>
+						<p >adresse: <b style="color: red;">{{fourn.adresse}} </b></p>
+                        <p >Tedlephone: <b style="color: red;">{{fourn.telephone}} </b></p>
+                        <p >email: <b style="color: red;">{{fourn.email}} </b></p>
+						<div class="d-flex justify-content-between align-items-center">
+				  
+						</div>
+					  </div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<!--endAllfournisseurs-->
+
+    {% endblock %}
